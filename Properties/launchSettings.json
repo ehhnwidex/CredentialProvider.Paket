@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CredentialProvider.Paket": {
+      "commandName": "Project",
+      "commandLineArgs": "-i -n -v normal https://artifactory.widex.io"
+    }
+  }
+}
