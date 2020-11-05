@@ -39,7 +39,7 @@ if (!$Force) {
 }
 
 # Get the zip file from the GitHub release
-$releaseUrlBase = "https://api.github.com/repos/Microsoft/artifacts-credprovider/releases"
+$releaseUrlBase = "https://api.github.com/repos/ehhnwidex/CredentialProvider.Paket/releases/"
 $versionError = "Unable to find the release version $Version from $releaseUrlBase"
 $releaseId = "latest"
 if (![string]::IsNullOrEmpty($Version)) {
@@ -109,7 +109,7 @@ if ($credProviderExists) {
     Write-Verbose "Removing existing content from $fullCredProviderPath"
     Remove-Item $fullCredProviderPath -Force -Recurse
 }
-$tempCredProviderPath = [System.IO.Path]::Combine($tempZipLocation, "plugins", $localCredProviderPath)
+$tempCredProviderPath = [System.IO.Path]::Combine($tempZipLocation, $localCredProviderPath)
 Write-Verbose "Copying Credential Provider from $tempCredProviderPath to $fullCredProviderPath"
 Copy-Item $tempCredProviderPath -Destination $fullCredProviderPath -Force -Recurse
 

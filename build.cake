@@ -63,7 +63,7 @@ Task("Pack")
     ChocolateyPack(nuspecFiles, settings);
     
     //Create a zip publish file
-    Zip("./bin/Release/netcoreapp2.1/CredentialProvider.Paket", "./artifacts/CredentialProvider.Paket.zip");
+    Zip("./bin/Release/netcoreapp2.1", "./artifacts/CredentialProvider.Paket.zip");
 });
 
 Task("Build-Installer")
